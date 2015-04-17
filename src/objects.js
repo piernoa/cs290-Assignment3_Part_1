@@ -10,7 +10,12 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  return {
+  	type:'Goldfish',
+ 	brand: 'Pepperidge Farm',
+ 	flavor: 'Cheddar',
+ 	count: 2000
+   }; //Modify ONLY this line
   //end your code
 }
 
@@ -23,21 +28,54 @@ function returnObjectLiteral() {
 *
 * In addition, the following methods should be
 * callable on a MessageLog object:
+
 * logMessage( {string} messageText, {number} direction) - This should log a
 * message
 * as either being sent or received. A direction of 0 indicates it is a message
 * the user sent. A direction of 1 indicates it is a message the user received.
 * Behavior for other numbers is undefined.
+
 * getSentMessage({number} n) - returns as a string, the content of the nth most
 * recently sent message. To conserve memory, the object should only keep the
 * last 5 message. n=0 retrieves the most recent n=4 retrieves the least recent
 * of the 5.
+
 * totalSent() - returns an integer indicating the total number of messages sent
-* totalReceived() - returns an integer indicating the total number of messages
+* 
+
+totalReceived() - returns an integer indicating the total number of messages
 * received
 */
 
 //your code here
+
+function MessageLog(user) {
+	this.user = user;
+	this.messageArray = [];
+	this.sent = 0;
+	this.received = 0;
+	this.logMessage = function (messageText, direction) {
+		if (direction == 1) {
+			this.received++;
+		} 
+		if (direction === 0) {
+			this.sent++;
+		}
+		if (this.messageArray.length == 5) {
+			this.messageArray.pop();
+		}
+		this.messageArray.unshift({message: messageText, direction: direction});
+	}
+	this.getSentMessage = function (n) {
+		return this.messageArray[n].message;
+	}
+	this.totalSent = function () {
+		return this.sent;
+	}
+	this.totalReceived = function () {
+		return this.received;
+	}
+}
 
 //end your code
 
@@ -47,6 +85,13 @@ function returnObjectLiteral() {
 * received.
 */
 //your code here
+MessageLog.prototype.lastReceivedMessage = function () {
+	for (var i=0; i<this.messageArray.length; i++) {
+		if (this.messageArray[i].direction == 1) {
+			return this.messageArray[i].message;
+		}
+	}
+}
 
 //end your code
 
@@ -57,5 +102,9 @@ function returnObjectLiteral() {
 */
 
 //your code here
+var myLog = new MessageLog("BlackHatGuy");
+myLog.logMessage("foo", 1);
+myLog.logMessage("bar", 1);
+myLog.logMessage("baz", 1);
 
 //end your code
