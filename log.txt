@@ -1,6 +1,9 @@
 Start: Thu, 16 Apr 2015 18:49:00 -0800
 End:   Thu, 16 Apr 2015 21:12:00 -0800
 Tasks: Began and finished the assignment part 1. I had some trouble figuring out what was being asked for on a few of them.
-Start: Thu, 21 Apr 2015 20:18:00 -0800
-End:   Thu, 21 Apr 2015 23:58:00 -0800
+Start: Tu, 21 Apr 2015 20:18:00 -0800
+End:   Tu, 21 Apr 2015 23:58:00 -0800
 Tasks: Began assignment part II. TODO: figure out github api to load data, put in filter for languages.
+Start: Wed, 22 Apr 2015 06:45:00 -0800
+End:   Wed, 22 Apr 2015 08:00:00 -0800
+Tasks: Finished Assignment part II
