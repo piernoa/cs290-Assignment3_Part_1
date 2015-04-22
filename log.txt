@@ -1,3 +1,6 @@
 Start: Thu, 16 Apr 2015 18:49:00 -0800
 End:   Thu, 16 Apr 2015 21:12:00 -0800
-Tasks: Began and finished the assignment. I had some trouble figuring out what was being asked for on a few of them.
+Tasks: Began and finished the assignment part 1. I had some trouble figuring out what was being asked for on a few of them.
+Start: Thu, 21 Apr 2015 20:18:00 -0800
+End:   Thu, 21 Apr 2015 21:12:00 -0800
+Tasks: Began assignment part II.
